@@ -13,11 +13,13 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hiden
 
 }
 
 body {
     background-image: linear-gradient(90deg,#693DBF, #462980);
+    overflow-x: hidden
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +49,11 @@ header {
     padding-left: 40px;
     display: flex;
     width: 60px;
+}
+
+.menubar {
+    display: none;
+    overflow: hidden;
 }
 
 .header-item {
@@ -89,7 +96,7 @@ main {
     align-items: center;
     padding-top: 7em;
     padding-bottom: 130px;
-    border-bottom: 1px solid #ffffff77;
+    border-bottom: 5px solid #ffffff77;
 }
 
 .main-img {
@@ -198,7 +205,7 @@ footer{
         align-items: center;
         padding-top: 7em;
         padding-bottom: 130px;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 10px solid #d18bff77;
     }
 
     .main-img {
@@ -222,9 +229,9 @@ footer{
         color: #231440;
     }
 
-    .stie1img {
+    .site1img {
         padding-top: 50px;
-        width: 500px;
+        width: 30rem;
     }
 
     .main-text {
@@ -245,7 +252,7 @@ footer{
         align-items: center;
         padding-top: 7em;
         padding-bottom: 130px;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 10px solid #d18bff77;
     }
     
     .main-img {
@@ -317,7 +324,43 @@ footer{
 
 }
 
-@media only screen and (max-width: 415px){
+@media only screen and (min-width: 50px) and (max-width: 430px){
+
+    .menubar {
+        display: flex;
+        justify-content: end;
+    }
+    
+    .menuimg {
+        cursor: pointer;
+        width: 2.5rem;
+        padding-right: 40px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+        background-color: #231440;
+        
+    }
+
+     {
+        transform: translateX(0%);
+    }
+
+    .header-item {
+        padding: 0px;
+        margin: 50px 0px;
+    }
 
     main {
         text-align: center;
@@ -326,8 +369,8 @@ footer{
         justify-content: space-around;
         align-items: center;
         padding-top: 7em;
-        padding-bottom: 200px;
-        border-bottom: 1px solid #ffffff;
+        padding-bottom: 130px;
+        border-bottom: 10px solid #d18bff77;
     }
     
     .main-img {
@@ -388,9 +431,13 @@ footer{
     }
 
     .site1img {
-        padding-top: 50px;
-        width: 15rem;
+        padding-top: 20px;
+        max-width: 22rem;
+        width: auto;
+        height: auto;
     }
 
 
 }
+
+
