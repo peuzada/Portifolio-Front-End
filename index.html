@@ -11,10 +11,9 @@
 <body>
     <header>
         <img src="imagens/robo2.png" alt="logo" class="logo">
-        <button class="menubar"  onclick="abrirMenu()">
-              <source media = "(max-width: 430px)" srcset="imagens/lista-de-reproducao.png" class="menuimg">
+        <div class="menubar"  onclick="abrirMenu()">            
               <img src="imagens/lista-de-reproducao.png" alt="menubar" class="menuimg">
-        </button>
+        </div>
         <nav class="menu">
         <a href="index2.html" class="header-item">1º site</a>
         <a href="" class="header-item">2º site</a>
@@ -45,12 +44,11 @@
     </section>
     <footer>Site feito e exclusivo por <strong>Pedro Daniel</strong></footer>
     <script>
-        var menu = document.queryselector('')
-        var menubar = document.queryselector('.menubar')
+        var menu = document.querySelector('.menu');
+        var menuIcon = document.querySelector('.menubar');
 
-        function abrirMenu {
-            menu.classList.togggle('open');
-
+        function abrirMenu(){
+            menu.classList.toggle('open');
         }
     </script>
 </body>
